@@ -37,8 +37,9 @@ for iter = 1:num_iters
     grad = X' * err;
     new_theta = alpha * 1/m * grad;
     theta = theta - new_theta;
+    
 
-    fprintf('%f\n', theta);
+
 
 
 
