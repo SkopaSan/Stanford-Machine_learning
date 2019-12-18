@@ -18,14 +18,16 @@ for iter = 1:num_iters
     %
 
 
-    %h = X * theta;
-    %err = h - y;
-    %grad = X' * err;
-    %new_theta = alpha * 1/m * grad;
-    %theta = theta - new_theta;
+    h = X * theta;
+    err = h - y;
+    grad = X' * err;
+    new_theta = alpha * 1/m * grad;
+    theta = theta - new_theta;
     
-    delta = (1/m)*sum(X.*repmat((X*theta - y), 1, size(X,2))); 
-    theta = (theta' - (alpha * delta))';
+    %delta = (1/m)*sum(X.*repmat((X*theta - y), 1, size(X,2))); 
+    %theta = (theta' - (alpha * delta))';
+
+
 
 
 
