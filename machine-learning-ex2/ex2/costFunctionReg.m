@@ -20,6 +20,16 @@ grad = zeros(size(theta));
 
 
 
+h = sigmoid(X*theta);
+err = h - y;
+theta(1) = 0;
+sqr_theta = theta'*theta;
+J = ((-y)' * log(h)-(1-y)' * log(1-h))/m + lambda / (m*2) * sqr_theta;
+grad = (X' * err)/m + (lambda/m * theta);
+
+
+
+
 
 
 % =============================================================

@@ -27,7 +27,7 @@ h = sigmoid(X*theta);
 J = 1 / m * (-y' * log(h)-(1-y)' * log(1-h));
 
 err = h - y;
-grad = X' * err;
+grad = (X' * err)/m;
 %new_theta = alpha * 1/m * grad;
 %theta = theta - new_theta;
 
